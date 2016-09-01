@@ -1,0 +1,3 @@
+lizard==1.12.6
+plyj==0.1
+slimit==0.8.1
