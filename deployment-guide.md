@@ -5,7 +5,7 @@
 
 ## Deployment
 
-The directory `sca` and `dca` needs to be copied and paste on the system.These directories has three main files.
+The directory `sca` and `dca` needs to be copied and pasted on the system.These directories have five main files.
 
 - **sca/sca.py**: This is the main file for the static code analyser.
 - - **sca/requirements.txt**: This file contains requirements required by the sca.py
