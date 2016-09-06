@@ -209,7 +209,7 @@ It is available only for the python.
 ##### How to use
 OS = > Runs only in linux
 
-Add `timetravelpdb.py` in your syxtem at `Python2x\Lib`
+Add `timetravelpdb.py` in your os at `Python27\Lib`
 
 Add these code in top of your pyhton code
 
