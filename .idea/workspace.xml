@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d182c99-5e34-4999-9fbb-d2e99d901166" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contribution-guide.md" afterPath="$PROJECT_DIR$/contribution-guide.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usage-guide.md" afterPath="$PROJECT_DIR$/usage-guide.md" />
     </list>
     <ignored path="Code Analyser.iws" />
@@ -86,7 +83,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="463">
@@ -106,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="usage-guide.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="usage-guide.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/usage-guide.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2091">
-              <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+            <state relative-caret-position="222">
+              <caret line="108" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -127,8 +124,8 @@
         <option value="$PROJECT_DIR$/deployment-guide.md" />
         <option value="$PROJECT_DIR$/x.md" />
         <option value="$PROJECT_DIR$/contribution-guide.md" />
-        <option value="$PROJECT_DIR$/usage-guide.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/usage-guide.md" />
       </list>
     </option>
   </component>
@@ -307,7 +304,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24450952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -447,14 +444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usage-guide.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2091">
-          <caret line="123" column="0" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/x.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -467,6 +456,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
           <caret line="186" column="0" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usage-guide.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="108" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
           <folding />
         </state>
       </provider>

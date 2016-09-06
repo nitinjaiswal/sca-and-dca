@@ -106,7 +106,7 @@ Time travel debugger is used to check the value of a variable at any instant in 
  - Add these code in top of your pyhton code
 
 > import timetravelpdb
-    timetravelpdb.set_trace()
+> timetravelpdb.set_trace()
 
 Enter the following commands to use it:
 
