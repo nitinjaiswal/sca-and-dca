@@ -76,7 +76,7 @@ Dynamic Code Analyser contains two parts:
 
  - Run the dca.py python file at `../dca/dca.py`
  - Enter the path of the directory to be checked for change
- - Enter the path of the file to be analysed (only python, java and javascript code is allowed)
+ - Enter the path of the file to be analysed (only python, javascript code is allowed)
  - It will produce the outout giving the path of the file or directory which is changed
 
 
