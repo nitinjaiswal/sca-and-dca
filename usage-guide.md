@@ -105,10 +105,10 @@ Time travel debugger is used to check the value of a variable at any instant in 
  - Copy the python file `timetravelpdb.py` at `../dca/timetravelpdb` to `../python2x/Lib`
  - Add these code in top of your pyhton code
 
-> import timetravelpdb
-
-> timetravelpdb.set_trace()
-
+```
+import timetravelpdb
+timetravelpdb.set_trace()
+```
 Enter the following commands to use it:
 
 ```
