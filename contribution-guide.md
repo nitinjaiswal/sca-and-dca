@@ -69,7 +69,7 @@ Sca is responsible for static code analyser. It uses lizard (3rd party app) for 
 Dca is responsibe for Dynamic Code Analysis.It contains :
 
  - **dca.py** It uses watchdog (3rd party app). It checks the any change made by the running program and give the url of the file or directory where change is made.
- - **dca_timetravel.py** This implements time travel debugging on the file whose url is entered.
+ - **dca_timetravel.py** This implements time travel debugging on the file whose path is entered.
  - **example.py** Example python program which implements time travel debugging.
  - **requirements.txt** It conatins requirements required by the dca.py
  - **timetravelpdb.py** This main python package for time travel debugging.

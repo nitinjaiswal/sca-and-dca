@@ -31,67 +31,40 @@ This code analyser is capable of performing both static and dynamic analysis.
 > - It can detetct the changes made to the other files and directories by the program running. 
 > - It also gives the facility of time travel debugging i.e the user can check the value of any variable at any point of time.
 
-Deployment Guide
+
+
+Functionalities
 -------------
 
- - Install python2.x
- - Copy this code to suitable directory
- - open terminal in `...\Code Analyser\sca`
- - Run command `pip install -r requiremments.txt`
- - open terminal in `...\Code Analyser\dca`
- - Run command `pip install -r requiremments.txt`
- - copy `timetravelpdb.py` file at  `...\Code Analyser\dca` at paste it to ``Python2x\Lib`
-
-Usage Guide
--------------
-
- - For Static Analysis run `sca.py` at `...\Code Analyser\sca`
- - For dynamic Analysis run `dca.py` at `...\Code Analyser\dca`
- - More detail are given in `How to use` in `For developer` section
- 
-
-For Developer
--------------
-Python 2.x (only)
-This Code Analyser conatins four parts : 
+This Code Analyser conatins four parts :
 
  1. Static Analysis Variables ( nloc, token count etc)
  2. Error detection
  3. Change detection
  4. Time travel debugger
+
 ####  Static Analysis Parameters
-Python package used :  [lizard ](https://pypi.python.org/pypi/lizard)
 It gives the value of parameters like line of code(nloc), token count, fan-in. fan-out etc.
-![enter image description here](http://images.slideplayer.com/16/4955966/slides/slide_70.jpg)
-
-Python package used :  [lizard ](https://pypi.python.org/pypi/lizard)
-
-##### How to use 
-
-> Enter file location
-> ![](images/sca1.png)
-> 
-> It will produce the output as shown
-> ![enter image description here](images/sca2.png)
-
-
 
 
 ####  Error detection
 It is used for ckecking some specific errors and warnings present in the program.
 For this first we have to make Abstract Syntax Tree (AST) for the code . Python package used for converting code to AST for different languages are:
 
- - [ast (for python)](https://docs.python.org/2/library/ast.html)
- - [plyj (for java)](https://pypi.python.org/pypi/plyj)
- - [slimit (for js)](https://pypi.python.org/pypi/slimit)
- 
- 
- For detectimg the error , [Hoare logic ](https://en.wikipedia.org/wiki/Hoare_logic) ( a[ formal method ](https://en.wikipedia.org/wiki/Formal_methods) technique is used. 
- 
-##### Hoare Triple
-![enter image description here](images/hoare.png)
+ - [ast (for python)](https://docs.python.org/2/library/ast.html) parser for python
+ - [plyj (for java)](https://pypi.python.org/pypi/plyj) parser for java written in python
+ - [slimit (for js)](https://pypi.python.org/pypi/slimit) parser for js written in python
 
-More on this can be found [here](https://www.cs.cmu.edu/~aldrich/courses/654-sp07/slides/7-hoare.pdf)
+
+ For detectimg the error , [Hoare logic ](https://en.wikipedia.org/wiki/Hoare_logic) ( a[ formal method ](https://en.wikipedia.org/wiki/Formal_methods) technique is used.
+
+##### Hoare Triple
+
+The central feature of Hoare logic is the Hoare triple. A triple describes how the execution of a piece of code changes the state of the computation. A Hoare triple is of the form
+
+    {P} C {Q}
+
+where P and Q are assertions and C is a command. P is named the precondition and Q the postcondition: when the precondition is met, executing the command establishes the postcondition
 
 ##### Logic for detection of error
 In this, we use Hoare triples to detect the error. Pre condition and post condition are invariants (invariants are the property of a program which remains same throughout the code)
@@ -100,18 +73,18 @@ i.e     {invariant} statement {invariant}
 
  - If this holds true i.e post condition satisfy invariant then code is error free
  - If post condition violates invariant then code might contain the error
- 
+
 ###### Type mismatch error
 Error => when  a variable of different data type is assign a value of different data type.
 
-    Example => 
+    Example =>
     int a;
     a="c";
-   
-  Logic => Let `type_dict` be a dictionary which contains variable name as  key and array of value of data type as value corresponding to the key.
-  
 
-    
+  Logic => Let `type_dict` be a dictionary which contains variable name as  key and array of value of data type as value corresponding to the key.
+
+
+
 
 > Example
 > `a=10
@@ -165,8 +138,8 @@ potential null pointer violation. • Check all master constructor paths if ({SI
 ###### Function return error
 Error => Function is returning but the on call it is not assign to any variable
 
-    Exampe => 
-    def sum(a,b) : 
+    Exampe =>
+    def sum(a,b) :
 	    return (a+b)
     sum(2,3)
 Logic => If function is returning something then add to an array `func_return_array`
@@ -175,11 +148,11 @@ Logic => If function is returning something then add to an array `func_return_ar
  - On function call if the call def corresponds to the `assignment` and that function name is not in the `func_return_array` then their is error
  - On function call if the call def corresponds to the `expression` and that function name is in the `func_return_array` then their is error
  - On function call if the call def corresponds to the `expression` and that function name is not in the `func_return_array` then their is no error
- 
+
 ###### Global variable used
 Warning => Gloabl variable is being used in the program
 
-    Exampe => 
+    Exampe =>
     a = 10
     global b = a
 Logic => if any varable is of gloabal type add it to array `is_gloabl`
@@ -193,22 +166,13 @@ Logic => if any varable is of gloabal type add it to array `is_gloabl`
 
 
 
- 
+
 
 #### Change detection
 It is used for identifying the changes made on running the program.
 It is available for python and node js but it can be extended for any other language if it can be called by a python script.
 
-Python Package used : [Watchdog](https://pypi.python.org/pypi/watchdog)
 
-#####How to use
-
-> Enter path of directory which is to be checked for any changes
-> ![enter image description here](images/dca1.png)
-> Enter path of file to be tested
-> ![enter image description here](images/dca2.png)
-> Then it will produce the output
-> ![enter image description here](images/dca3.png)
 
 
 ####  Time travel debugger
@@ -216,22 +180,7 @@ Python Package used : [Watchdog](https://pypi.python.org/pypi/watchdog)
 It is used for checking the value of a variable at any point of time.
 It is available only for the python.
 
-##### How to use 
-OS = > Runs only in linux
-
-Add `timetravelpdb.py` in your os at `Python27\Lib`
-
-Add these code in top of your pyhton code
-
-    import timetravelpdb
-    timetravelpdb.set_trace()
-Then enter the following commands : 
 
 
- - n => for executing next statement
- - ulist => for listing the previous universe exist
- - ujump => for jumping to any existing universe
- - print {vaiable name} = > to check the value of the  variable name
- - uup => for coming back to current universe
- 
+
 
